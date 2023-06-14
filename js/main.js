@@ -68,8 +68,12 @@ function copyColor(elem, random) {
     navigator.clipboard
         .writeText(random)
         .then(() => {
-            colorElem.innerHTML = 'Copied!';
-            setTimeout(() => (colorElem.innerHTML = random), 2000);
+            colorElem.style = 'color: orange';
+            colorElem.innerHTML = 'COPIED!';
+            setTimeout(() => {
+                colorElem.innerHTML = random;
+                colorElem.style = 'color: black';
+            }, 2000);
         })
         .catch(() => {
             alert('Failed to copy the color code');
