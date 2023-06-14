@@ -23,7 +23,7 @@ body {
 }
 
 .color:hover {
-    transform: scale(0.9);
+    transform: scale(0.97);
 }
 
 .rect-box {
@@ -36,7 +36,7 @@ body {
     background-color: #fff;
     display: block;
     padding-top: 4px;
-    padding-bottom: 4px;
+    padding-bottom: 8px;
 }
 
 .button {

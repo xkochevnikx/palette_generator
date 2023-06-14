@@ -61,3 +61,17 @@ function generate() {
         container.appendChild(color);
     }
 }
+
+//todo - функция копирования принимает элемент color в котором span содержит текст цвета. обращаясь к нему получаем класс спана и сохраняю в переменную. дальше идёт функция копирования которая в случае положительного резултата выводит текст скопировано в спанчик и через две секунды возвращает назад текст цвета
+function copyColor(elem, random) {
+    const colorElem = elem.querySelector('.hex-value');
+    navigator.clipboard
+        .writeText(random)
+        .then(() => {
+            colorElem.innerHTML = 'Copied!';
+            setTimeout(() => (colorElem.innerHTML = random), 2000);
+        })
+        .catch(() => {
+            alert('Failed to copy the color code');
+        });
+}
